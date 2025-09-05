@@ -1,0 +1,57 @@
+Step 1: To run zookeeper
+---------------------------
+cmd> zookeeper-server-start.bat zookeeper.properties
+
+Step 2: To run kafka server
+---------------------------
+cmd> kafka-server-start.bat server.properties
+
+Step 3: To create a topics
+---------------------------
+cmd> kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic customer
+
+Step 4: To See list of topics
+------------------------------
+cmd> kafka-topics.bat --list --zookeeper localhost:2181
+
+
+~~~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Spring Boot + Apache Kafka Application
+================================================
+Step-1: Download Zookeeper
+Step-2: Download Apache Kafka
+Step-3: Set Path to Zookeeper in Environment variables upto bin folder
+Step-4: Start Zookeeper server using below command from Kafka folder
+  command: zookeeper-server-start.bat zookeeper.properties
+
+Note: Above command will available in kafka/bin/windows folder
+Note: zookeeper.properties file will be available in kafka/config folder. You can copy zookeeper.properties and server.properties files
+from kafka/config folder to kafka/bin/windows folder.
+
+Step-5: Start Kafka Server using below command from Kafka folder.
+  command: kafka-server-start.bat server.properties
+
+Note: server.properties file will be available in config folder (Copied to windows folder)
+
+Step-6: Create Kafka Topic using below command
+  command: kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 -- topic MyTopicName
+
+Step-7: View created Topics using below command.
+  command: kafka-topics.bat --list --zookeeper localhost:2181
+
+Step-8: Create Spring Boot Project in IDE
+
+Step-9: Add below kafka related dependencies in pom.xml
+
+
+~~~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
